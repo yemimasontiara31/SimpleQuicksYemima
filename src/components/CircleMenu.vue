@@ -45,7 +45,7 @@
           class="circle-menu-items"
         >
           <p v-if="$route.path == '/'" class="text-gray6 mb-[10px]">Inbox</p>
-          <i :class="{ 'fas fa-envelope bg-white': true, 'bg-inboxactive menu-active': $route.path === '/message' }"></i>
+          <i :class="{ 'fas fa-envelope': true, 'bg-inboxactive menu-active': $route.path === '/message' }"></i>
         </router-link>
       </div>
 
@@ -64,7 +64,7 @@
           :class="{'task-active': $route.path === '/tasks' }"
         >
           <p v-if="$route.path == '/'" class="text-gray6 mb-[10px]">Tasks</p>
-          <i :class="{ 'fas fa-tasks bg-white': true, 'bg-taskactive menu-active': $route.path === '/tasks' }"></i>
+          <i :class="{ 'fas fa-tasks': true, 'bg-taskactive menu-active': $route.path === '/tasks' }"></i>
         </router-link>
       </div>
     </div>
