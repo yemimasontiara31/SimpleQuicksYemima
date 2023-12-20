@@ -16,8 +16,10 @@ module.exports = {
       colors: {
           gray1: "#333333",
           gray2: "#4F4F4F",
+          gray3: "#C4C4C4",
           gray6: "#F2F2F2",
           menublue: "#2F80ED",
+          blue1: "#2F80ED",
           inboxactive: "#8785FF",
           taskactive: "#F8B76B",
       },
