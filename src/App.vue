@@ -1,26 +1,31 @@
+<!-- App.vue -->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <router-view />
+    <div class="menu flex h-screen">
+    <div class="w-[285px] border-r border-white bg-gray1 p-4">
+    </div>
+
+    <div class="w-[1635px] bg-gray1">
+      <!-- Content for the second column -->
+      <div class="search h-[58px] bg-gray2 p-4">
+        <i class="fa-solid fa-magnifying-glass text-white"></i>
+      </div>
+    </div>
+  </div>
+  <CircleMenu />
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+  import CircleMenu from './components/CircleMenu.vue';
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<script>
+
+// export default {
+//   components: {
+//     CircleMenu,
+//   },
+// };
+</script>
