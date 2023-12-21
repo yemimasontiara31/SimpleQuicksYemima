@@ -2,7 +2,7 @@
 <template>
   <div class="card-chat bg-white rounded-md w-[534px] h-[537px]">
     <div class="content relative h-[537px]">
-      <div class="button-task m-4">
+      <div class="button-task mt-[24px]">
           <div class="content-task pl-[50px] pr-[10px] flex justify-between items-center">
             <div class="my-tasks-dropdown">
               <div @click="toggleDropdown" class="dropdown-toggle">
