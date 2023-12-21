@@ -3,7 +3,10 @@
     <div 
       :class="{ 'circle-menu': true, 'bg-gray2': $route.path === '/tasks' || $route.path === '/message', 'bg-menublue': $route.path === '/' }" 
       @click="toggleMenu">
-      <i class="fas fa-bars"></i>
+      <img
+          src="../img/icon-all-menu.png"
+          class="w-15 m-auto"
+      />
     </div>
 
     <div v-if="isOpen" 
@@ -17,7 +20,13 @@
           :class="{'task-active': $route.path === '/tasks' }"
         >
           <p v-if="$route.path == '/'" class="text-gray6 mb-[10px]">Tasks</p>
-          <i :class="{ 'fas fa-tasks bg-white': true, 'bg-taskactive menu-active': $route.path === '/tasks' }"></i>
+          <!-- <i :class="{ 'fas fa-tasks bg-white': true, 'bg-taskactive menu-active': $route.path === '/tasks' }"></i> -->
+          <img
+              src="../img/menu-task.png"
+              class="w-15 m-auto"
+              :class="{ 'bg-white': true, 
+                'bg-taskactive menu-active': $route.path === '/tasks' }"
+          />
         </router-link>
 
         <router-link
@@ -25,19 +34,33 @@
           class="circle-menu-items"
         >
           <p v-if="$route.path == '/'" class="text-gray6 mb-[10px]">Inbox</p>
-          <i :class="{ 'fas fa-envelope bg-white': true, 'bg-inboxactive menu-active': $route.path === '/message' }"></i>
+          <!-- <i :class="{ 'fas fa-envelope bg-white': true, 'bg-inboxactive menu-active': $route.path === '/message' }"></i> -->
+
+          <img
+              src="../img/menu-inbox.png"
+              class="w-10 m-auto"
+              :class="{ 'fas fa-envelope bg-white': true, 
+                'bg-inboxactive menu-active': $route.path === '/message' }"
+          />
         </router-link>
       </div>
 
 
-      <div v-if="$route.path == '/message'" >
+      <div class="menu-active" v-if="$route.path == '/message'" >
         <router-link
           to="/tasks"
           class="circle-menu-items noactive"
           :class="{'task-active': $route.path === '/tasks' }"
         >
           <p v-if="$route.path == '/'" class="text-gray6 mb-[10px]">Tasks</p>
-          <i :class="{ 'fas fa-tasks bg-white': true, 'bg-taskactive menu-active': $route.path === '/tasks' }"></i>
+          <!-- <i :class="{ 'fas fa-tasks bg-white': true, 'bg-taskactive menu-active': $route.path === '/tasks' }"></i> -->
+
+          <img
+              src="../img/menu-task.png"
+              class="m-auto"
+              :class="{ 'bg-white': true, 
+              'bg-taskactive menu-active': $route.path === '/tasks' }"
+          />
         </router-link>
 
         <router-link
@@ -45,17 +68,30 @@
           class="circle-menu-items"
         >
           <p v-if="$route.path == '/'" class="text-gray6 mb-[10px]">Inbox</p>
-          <i :class="{ 'fas fa-envelope': true, 'bg-inboxactive menu-active': $route.path === '/message' }"></i>
+          <!-- <i :class="{ 'fas fa-envelope': true, 'bg-inboxactive menu-active': $route.path === '/message' }"></i> -->
+
+          <img
+              src="../img/menu-inbox-active.png"
+              class="m-auto"
+              :class="{
+                'bg-inboxactive menu-active': $route.path === '/message' }"
+          />
         </router-link>
       </div>
 
-      <div v-if="$route.path == '/tasks'" >
+      <div class="menu-active" v-if="$route.path == '/tasks'" >
        <router-link
           to="/message"
           class="circle-menu-items noactive"
         >
           <p v-if="$route.path == '/'" class="text-gray6 mb-[10px]">Inbox</p>
-          <i :class="{ 'fas fa-envelope bg-white': true, 'bg-inboxactive menu-active': $route.path === '/message' }"></i>
+          <!-- <i :class="{ 'fas fa-envelope bg-white': true, 'bg-inboxactive menu-active': $route.path === '/message' }"></i> -->
+          <img
+              src="../img/menu-inbox.png"
+              class="m-auto"
+              :class="{ 'bg-white': true, 
+                'bg-inboxactive menu-active': $route.path === '/message' }"
+          />
         </router-link>
 
         <router-link
@@ -64,7 +100,13 @@
           :class="{'task-active': $route.path === '/tasks' }"
         >
           <p v-if="$route.path == '/'" class="text-gray6 mb-[10px]">Tasks</p>
-          <i :class="{ 'fas fa-tasks': true, 'bg-taskactive menu-active': $route.path === '/tasks' }"></i>
+          <!-- <i :class="{ 'fas fa-tasks': true, 'bg-taskactive menu-active': $route.path === '/tasks' }"></i> -->
+          <img
+              src="../img/menu-task-active.png"
+              class="m-auto"
+              :class="{
+                'bg-taskactive menu-active': $route.path === '/tasks' }"
+          />
         </router-link>
       </div>
     </div>
@@ -142,7 +184,11 @@ export default {
   text-align: center;
 }
 
-.circle-menu-items i{
+.menu-active .circle-menu-items img {
+  margin: 0 35px;
+}
+
+.circle-menu-items img{
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -150,18 +196,20 @@ export default {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  padding: 15px;
+  margin: 0 10px;
 }
 
-.circle-menu-items i.menu-active{
+.circle-menu-items img.menu-active{
   width: 68px;
   height: 68px;
   margin: 0;
 }
 
-.menu-items i {
+/* .menu-items img {
   margin: 0 10px;
   font-size: 20px;
   cursor: pointer;
   transition: transform 0.3s;
-}
+} */
 </style>

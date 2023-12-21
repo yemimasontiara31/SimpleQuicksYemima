@@ -47,7 +47,7 @@ export default {
       // Simulate loading delay
       setTimeout(() => {
         this.isLoading = false;
-      }, 3000);
+      }, 1500);
     },
 
     methods: {
