@@ -1,6 +1,6 @@
 <!-- Message.vue -->
 <template>
-  <div class="card-chat bg-white rounded-md w-[534px] h-[537px]">
+  <div class="card-chat bg-white rounded-md w-[650px] h-[537px]">
     <div v-if="!showDetails && !showDetails2 && !showDetails3" class="content relative h-[537px]">
       <div class="search rounded-md border border-gray2 mt-[24px] m-4">
           <div class="content-search h-[32px] px-[50px] flex justify-between items-center">
@@ -115,7 +115,7 @@
       
     </div>
 
-    <div v-if="showDetails" class="content-chat w-[534px] h-[537px]">
+    <div v-if="showDetails" class="content-chat w-[650px] h-[537px]">
         <div class="head-chat p-[20px] flex justify-between items-center border-b border-gray4">
           <div class="chat-name flex items-center">
             <i class="fa-solid fa-arrow-left cursor-pointer" @click="toggleDetails"></i>
@@ -160,11 +160,11 @@
           <div class="you flex flex-col items-end mt-[10px]">
             <h3 class="font-bold text-purple">You</h3>
             <div class="body flex items-top">
-                <div class="dropdown-container mr-[10px] cursor-pointer" @click="toggleDropdown">
+                <div class="dropdown-container mr-[10px] cursor-pointer" @click="toggleDropdown2">
                   <i class="fa-solid fa-ellipsis text-gray2"></i>
 
                   <!-- Dropdown Content -->
-                  <div v-if="isDropdownOpen" class="dropdown-content edit">
+                  <div v-if="isDropdownOpen2" class="dropdown-content edit">
                     <ul>
                       <li class="text-blue1">Edit</li>
                       <li class="text-red">Delete</li>
@@ -189,11 +189,11 @@
                   <p class="mt-[15px]">16:45</p>
                 </div>
 
-                <div class="dropdown-container ml-[10px] cursor-pointer" @click="toggleDropdown">
+                <div class="dropdown-container ml-[10px] cursor-pointer" @click="toggleDropdown3">
                   <i class="fa-solid fa-ellipsis text-gray2"></i>
 
                   <!-- Dropdown Content -->
-                  <div v-if="isDropdownOpen" class="dropdown-content edit">
+                  <div v-if="isDropdownOpen3" class="dropdown-content edit">
                     <ul>
                       <li class="text-blue1">Edit</li>
                       <li class="text-red">Delete</li>
@@ -214,7 +214,7 @@
         </div>
     </div>
 
-    <div v-if="showDetails2" class="content-chat w-[534px] h-[537px]">
+    <div v-if="showDetails2" class="content-chat w-[650px] h-[537px]">
         <div class="head-chat p-[20px] flex justify-between items-center border-b border-gray4">
           <div class="chat-name flex items-center">
             <i class="fa-solid fa-arrow-left cursor-pointer" @click="toggleDetails2"></i>
@@ -258,11 +258,11 @@
           <div class="you flex flex-col items-end mt-[10px]">
             <h3 class="font-bold text-purple">You</h3>
             <div class="body flex items-top">
-                <div class="dropdown-container mr-[10px] cursor-pointer" @click="toggleDropdown">
+                <div class="dropdown-container mr-[10px] cursor-pointer" @click="toggleDropdown2">
                   <i class="fa-solid fa-ellipsis text-gray2"></i>
 
                   <!-- Dropdown Content -->
-                  <div v-if="isDropdownOpen" class="dropdown-content edit">
+                  <div v-if="isDropdownOpen2" class="dropdown-content edit">
                     <ul>
                       <li class="text-blue1">Edit</li>
                       <li class="text-red">Delete</li>
@@ -296,11 +296,11 @@
                   <p class="mt-[10px]">19:32</p>
                 </div>
 
-                <div class="dropdown-container ml-[10px] cursor-pointer" @click="toggleDropdown">
+                <div class="dropdown-container ml-[10px] cursor-pointer" @click="toggleDropdown3">
                   <i class="fa-solid fa-ellipsis text-gray2"></i>
 
                   <!-- Dropdown Content -->
-                  <div v-if="isDropdownOpen" class="dropdown-content edit">
+                  <div v-if="isDropdownOpen3" class="dropdown-content edit">
                     <ul>
                       <li class="text-blue1">Edit</li>
                       <li class="text-red">Delete</li>
@@ -313,11 +313,11 @@
           <div class="you flex flex-col items-end mt-[10px]">
             <h3 class="font-bold text-purple">You</h3>
             <div class="body flex items-top">
-                <div class="dropdown-container mr-[10px] cursor-pointer" @click="toggleDropdown">
+                <div class="dropdown-container mr-[10px] cursor-pointer" @click="toggleDropdown4">
                   <i class="fa-solid fa-ellipsis text-gray2"></i>
 
                   <!-- Dropdown Content -->
-                  <div v-if="isDropdownOpen" class="dropdown-content edit">
+                  <div v-if="isDropdownOpen4" class="dropdown-content edit">
                     <ul>
                       <li class="text-blue1">Edit</li>
                       <li class="text-red">Delete</li>
@@ -342,11 +342,11 @@
                   <p class="mt-[10px]">19:32</p>
                 </div>
 
-                <div class="dropdown-container ml-[10px] cursor-pointer" @click="toggleDropdown">
+                <div class="dropdown-container ml-[10px] cursor-pointer" @click="toggleDropdown5">
                   <i class="fa-solid fa-ellipsis text-gray2"></i>
 
                   <!-- Dropdown Content -->
-                  <div v-if="isDropdownOpen" class="dropdown-content edit">
+                  <div v-if="isDropdownOpen5" class="dropdown-content edit">
                     <ul>
                       <li class="text-blue1">Edit</li>
                       <li class="text-red">Delete</li>
@@ -377,11 +377,11 @@
                   <p class="mt-[15px]">19:32</p>
                 </div>
 
-                <div class="dropdown-container ml-[10px] cursor-pointer" @click="toggleDropdown">
+                <div class="dropdown-container ml-[10px] cursor-pointer" @click="toggleDropdown6">
                   <i class="fa-solid fa-ellipsis text-gray2"></i>
 
                   <!-- Dropdown Content -->
-                  <div v-if="isDropdownOpen" class="dropdown-content edit">
+                  <div v-if="isDropdownOpen6" class="dropdown-content edit">
                     <ul>
                       <li class="text-blue1">Edit</li>
                       <li class="text-red">Delete</li>
@@ -402,7 +402,7 @@
           </div>
     </div>
 
-    <div v-if="showDetails3" class="content-chat w-[534px] h-[537px]">
+    <div v-if="showDetails3" class="content-chat w-[650px] h-[537px]">
         <div class="head-chat p-[20px] flex justify-between items-center border-b border-gray4">
           <div class="chat-name flex items-center">
             <i class="fa-solid fa-arrow-left cursor-pointer" @click="toggleDetails3"></i>
@@ -478,6 +478,11 @@
         showDetails2: false,
         showDetails3: false,
         isDropdownOpen: false,
+        isDropdownOpen2: false,
+        isDropdownOpen3: false,
+        isDropdownOpen4: false,
+        isDropdownOpen5: false,
+        isDropdownOpen6: false,
         showNewMessage: false,
         lastScrollTop: 0,
       };
@@ -501,6 +506,26 @@
 
       toggleDropdown() {
         this.isDropdownOpen = !this.isDropdownOpen;
+      },
+
+      toggleDropdown2() {
+        this.isDropdownOpen2 = !this.isDropdownOpen2;
+      },
+
+      toggleDropdown3() {
+        this.isDropdownOpen3 = !this.isDropdownOpen3;
+      },
+
+      toggleDropdown4() {
+        this.isDropdownOpen4 = !this.isDropdownOpen4;
+      },
+
+      toggleDropdown5() {
+        this.isDropdownOpen5 = !this.isDropdownOpen5;
+      },
+
+      toggleDropdown6() {
+        this.isDropdownOpen6 = !this.isDropdownOpen6;
       },
 
       toggleDetails() {
@@ -624,7 +649,7 @@
   top: 15px; /* Place the dropdown below the icon */
   left: 0;
   z-index: 2;
-  width: 150px
+  width: 150px;
 }
 
 .dropdown-content.edit li:first-child{
